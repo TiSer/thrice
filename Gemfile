@@ -5,7 +5,7 @@ gem 'rails', '3.1.0'
 #fixbugs
 gem 'therubyracer'
 gem 'rack', '1.3.3'
-
+gem 'pg'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
@@ -16,6 +16,8 @@ gem 'devise', '> 1.1.7'
 gem "paperclip"
 
 gem 'haml'
+gem 'heroku'
+gem "taps", "~> 0.3.23"
 
 gem "settingslogic", :git => "git://github.com/binarylogic/settingslogic.git"
 
@@ -39,4 +41,9 @@ end
 group :test do
   # Pretty printed test output
   gem 'turn', :require => false
+end
+
+group :production do
+  gem 'therubyracer-heroku', '0.8.1.pre3' # you will need this too
+  gem 'pg'
 end
