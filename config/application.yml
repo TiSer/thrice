@@ -1,0 +1,20 @@
+defaults: &defaults
+  cool:
+    saweet: nested settings
+  neat_setting: 24
+  awesome_setting: <%= "Did you know 5 + 5 = #{5 + 5}?" %>
+
+development:
+    <<: *defaults
+
+    base_url: http://localhost:3000
+    assets_host_url: http://localhost:3000
+
+test:
+  <<: *defaults
+
+production:
+    <<: *defaults
+
+    base_url: http://localhost:3000
+    assets_host_url: http://localhost:3000

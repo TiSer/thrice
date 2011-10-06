@@ -1,0 +1,8 @@
+/* Add the new note to the bottom of the notes list */
+$("#notes").append("<%= escape_javascript(render(@note)) %>");
+
+/* Highlight the new note */
+$("#note_<%= @note.id %>").effect("highlight", {color: "#BF2F2F"}, 3000);
+
+/* Reset the note form */
+$("#new_note")[0].reset();

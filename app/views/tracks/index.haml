@@ -1,0 +1,9 @@
+%br/
+
+%h3=link_to "Add new track", new_track_path
+
+%br/
+%p
+  -@tracks.each do |track|
+    =link_to track.musicfile_file_name, track.musicfile.url
+    ="( #{track.category} )"

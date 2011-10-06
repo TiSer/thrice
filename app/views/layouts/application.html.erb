@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Thrice</title>
+  <%= stylesheet_link_tag    "style.css" %>
+  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag  "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" %>
+  <%= javascript_include_tag  "http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <div align="left">
+     <% if user_signed_in? %>
+		   You entered as <b><%= current_user.name %></b>. <%= link_to "Log out", destroy_user_session_path, :method => :delete %>
+	    <% else %>
+		   <%= link_to "Log in", new_user_session_path %>
+	   <% end %>
+  </div>
+
+  <%= render :partial => "shared/tab" %>
+
+<%= yield %>
+
+</body>
+</html>
