@@ -1,0 +1,8 @@
+- if @track.errors.any?
+  #error_explanation
+    %h2
+      = pluralize(@track.errors.count, "error")
+      prohibited category from being saved:
+    %ul
+      - @track.errors.full_messages.each do |msg|
+        %li= msg

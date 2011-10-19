@@ -1,2 +1,4 @@
+%p=render :partial => "tracks_errors"
+
 = form_for @track do |f|
   = render :partial => "form", :locals => {:f => f, :action => "new"}

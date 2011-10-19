@@ -3,7 +3,7 @@ class Track < ActiveRecord::Base
   belongs_to :user
 
 #  attr_accessor :musicfile_file_name
-  validates_presence_of :link
+  validates_presence_of :name, :link
 
   CATEGORIES = [ ["Our: DEMO", "our_demo"], ["Our: JAM", "our_jam"], ["Our: RAW", "our_raw"], ["Other", "other"] ]
 
