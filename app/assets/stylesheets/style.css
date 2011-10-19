@@ -11,7 +11,7 @@ a {
 .index { background-image: url('back.png'); background-repeat: repeat; padding:3em; text-align:center; }
 
 .notes_background { background:#7F2F2F; width:550px; margin-left:10px; margin-bottom:10px;}
-#notes {margin-left:10px; width:550px; background:#7F2F2F; color:white; padding:2.5px}
+#notes {margin-left:10px; width:550px; background:#7F2F2F; color:white; padding:2.5px; font-size:16px; font-family:'Calibri'}
 .topic {color:grey}
 #note {margin-left:10px; width:530px; background:#BF2F2F; color:white; margin-bottom:10px; font-weight: bold; padding:2px; border-radius: 2px; }
 .post_date { float:right; font-weight: lighter; font-size:0.8em; }

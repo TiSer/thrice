@@ -7,4 +7,4 @@
         .del= link_to 'Delete', note_path(note), :method => :delete, :class => "delete", :remote => true
     %p
       %div{:align=>"left"}
-        %b#note= note.body
+        %pre#note= note.body
