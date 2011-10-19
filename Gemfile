@@ -18,6 +18,7 @@ gem "paperclip"
 gem 'haml'
 gem 'heroku'
 gem "taps", "~> 0.3.23"
+gem 'will_paginate', '~> 3.0'
 
 gem "settingslogic", :git => "git://github.com/binarylogic/settingslogic.git"
 

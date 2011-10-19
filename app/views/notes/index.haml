@@ -6,6 +6,7 @@
   %h4.topic "The name of the game (of the group)"
   %br
 
+  %div{:align => 'left'}= will_paginate @notes
 
   #notes
     = render :partial => @notes, :locals => { :list => true }
