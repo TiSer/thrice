@@ -10,5 +10,8 @@
       =track.category.blank? ? "( category not choosen )" : "( #{track.category} )"
       |
       =link_to "Edit", edit_track_path(track)
+      |
+      -if current_user.is_admin?
+        = link_to 'Delete', track_path(track), :method => :delete, :class => "delete", :remote => true
       %br
       %br
