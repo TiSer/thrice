@@ -1,9 +1,14 @@
-%br/
+%div.index
+  %br/
 
-%h3=link_to "Add new track", new_track_path
+  %h3=link_to "Add new track link", new_track_path
 
-%br/
-%p
-  -@tracks.each do |track|
-    =link_to track.musicfile_file_name, track.musicfile.url
-    ="( #{track.category} )"
+  %br/
+  %p
+    -@tracks.each do |track|
+      =link_to track.name, track.link
+      =track.category.blank? ? "( category not choosen )" : "( #{track.category} )"
+      |
+      =link_to "Edit", edit_track_path(track)
+      %br
+      %br

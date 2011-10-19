@@ -1,28 +1,30 @@
-%h2 All notes.
+%div.index
+  %h2 All notes.
 
-%b Here you can left some notes.
-%b= "Today is #{day_to_word(Date.today.day)} and topic is:"
-%h4.topic "The name of the game (of the group)"
-%br
+  %b Here you can left some notes.
+  %b= "Today is #{day_to_word(Date.today.day)} and topic is:"
+  %h4.topic "The name of the game (of the group)"
+  %br
 
 
-#notes
-  = render :partial => @notes, :locals => { :list => true }
+  #notes
+    = render :partial => @notes, :locals => { :list => true }
 
-/
-%div#notes
-  -#@notes.each do |note|
-    #%i.said="#{note.user.name} said:"
+  /
+  %div#notes
+    -#@notes.each do |note|
+      #%i.said="#{note.user.name} said:"
 
-    %div#note
-      %p.note_body=# note.body
-      
-      .post_date
-        Note was left at
-        =#note.created_at.to_s(:my_datetime)
+      %div#note
+        %p.note_body=# note.body
+        
+        .post_date
+          Note was left at
+          =#note.created_at.to_s(:my_datetime)
 
-%br
-%br
-%hr
-= form_for @note, :remote => true do |f|
-  = render :partial => "form", :locals => {:f => f, :action => "new"}
+  %br
+  %br
+  %hr
+  %div{:align => 'left'}
+    = form_for @note, :remote => true do |f|
+      = render :partial => "form", :locals => {:f => f, :action => "new"}

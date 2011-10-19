@@ -7,7 +7,11 @@
 %br
 %br
 
-%p= f.label :upload_your_track
-%p= f.file_field :musicfile
+%p=f.label :song_name
+%p=f.text_field :name
+%br
+
+%p=f.label :enter_link_to_track   # f.label :upload_your_track
+%p=f.text_field :link   # f.file_field :musicfile
 %br
 = f.submit "OK"

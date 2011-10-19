@@ -1,23 +1,25 @@
-body { background:#F8F8F8 }
+body { background:#F8F8F8; color:#bcc4bd;  background-image: url('body_back.png'); }
 
 a {
-   color:black;
+   color:white;
   }
 
 .login {margin-left:1em}
 
 .rega {margin-left:1em}
 
+.index { background-image: url('back.png'); background-repeat: repeat; padding:3em; text-align:center; }
+
 .notes_background { background:#7F2F2F; width:550px; margin-left:10px; margin-bottom:10px;}
 #notes {margin-left:10px; width:550px; background:#7F2F2F; color:white; padding:2.5px}
-.topic {color:green}
+.topic {color:grey}
 #note {margin-left:10px; width:530px; background:#BF2F2F; color:white; margin-bottom:10px; font-weight: bold; padding:2px; border-radius: 2px; }
 .post_date { float:right; font-weight: lighter; font-size:0.8em; }
-.del {float:right; font-size:0.9em; background:green; padding:1px; border-radius: 2px; text-decoration: none;}
+.del {float:right; font-size:0.9em; background:#a48173; padding:1px; border-radius: 2px; text-decoration: none;}
 .wrote { background:grey; padding:1px; border-radius: 2px; }
 .dateandoptions {color:black}
 
-.tab {background:#E0E0E0; padding:5px}
+.tab { background-image: url('tab_back.png'); padding:5px}
 
 .round {
         -moz-border-radius:    10px;

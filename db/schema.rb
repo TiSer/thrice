@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111006115331) do
+ActiveRecord::Schema.define(:version => 20111019085442) do
 
   create_table "notes", :force => true do |t|
     t.text     "body"
@@ -29,6 +29,8 @@ ActiveRecord::Schema.define(:version => 20111006115331) do
     t.string   "musicfile_content_type"
     t.integer  "musicfile_file_size"
     t.datetime "musicfile_updated_at"
+    t.string   "name"
+    t.string   "link"
   end
 
   create_table "users", :force => true do |t|
