@@ -6,5 +6,5 @@
       -if note.user == current_user || current_user.is_admin?
         .del= link_to 'Delete', note_path(note), :method => :delete, :class => "delete", :remote => true
     %p
-      %div{:align=>"left"}
+      %div{:align=>"justify"}
         %pre#note= note.body
