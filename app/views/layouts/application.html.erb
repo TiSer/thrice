@@ -13,12 +13,10 @@
   <div align="left">
      <% if user_signed_in? %>
 		   You entered as <b><%= current_user.name %></b>. <%= link_to "Log out", destroy_user_session_path, :method => :delete %>
-	    <% else %>
-		   <%= link_to "Log in", new_user_session_path %>
 	   <% end %>
   </div>
 
-  <%= render :partial => "shared/tab" %>
+  <%= render :partial => "shared/tab" if user_signed_in? %>
 
 <%= yield %>
 

@@ -1,12 +1,13 @@
 %div.index
-  %h2 All notes.
+  %b.title All notes.
+  %br/
 
-  %b Here you can left some notes.
-  %b= "Today is #{day_to_word(Date.today.day)} and topic is:"
-  %h4.topic "The name of the game (of the group)"
+  %span Here you can left some notes.
+  %span= "Today is #{day_to_word(Date.today.day)} and topic is:"
+  %span.topic "The name of the game (of the group)"
   %br
 
-  %div{:align => 'left'}= will_paginate @notes
+  %div.paginate{:align => 'left'}= will_paginate @notes
   %br
 
   #notes
